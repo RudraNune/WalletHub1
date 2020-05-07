@@ -76,7 +76,7 @@ public class PostStatus {
     	JavascriptExecutor js = (JavascriptExecutor)driver;
     	js.executeScript("document.getElementById('u_0_b').click()");
     	
-//    	CLick on Create Post and update the status as 'Hello World' 
+//    	Click on Create Post and update the status as 'Hello World' 
 		driver.findElement(By.xpath("//*[text()='Create post']")).click();
 		Actions ac = new Actions(driver);
 		WebElement txtelement = driver.findElement(By.xpath("//div[@id='pagelet_composer']//textarea"));
