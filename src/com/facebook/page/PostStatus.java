@@ -63,7 +63,7 @@ public class PostStatus {
 		PostStatus PS = new PostStatus();
 		PS.initialization();
 		
-//		Setting browsers
+//		Setting browser
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
