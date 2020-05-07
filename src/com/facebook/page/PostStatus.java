@@ -43,11 +43,11 @@ public class PostStatus {
 					System.getProperty("user.dir") + "\\src\\com\\facebook\\resources\\chromedriver.exe");
 			HashMap<String, Object> perfsm = new HashMap<String, Object>();
 			perfsm.put("profile.default_content_settings.popups", 0);
-			ChromeOptions cp = new ChromeOptions();
-			cp.addArguments("--disable-notifications");
-			cp.setExperimentalOption("prefs", perfsm);
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
+			options.setExperimentalOption("prefs", perfsm);
 
-			driver = new ChromeDriver(cp);
+			driver = new ChromeDriver(options);
 		} else if (browserName.equals("IE")) {
 
 			System.setProperty("webdriver.ie.driver",
@@ -58,8 +58,8 @@ public class PostStatus {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		PostStatus PS = new PostStatus();
-		PS.initialization();
+		PostStatus poststatus = new PostStatus();
+		poststatus.initialization();
 
 		// Setting browser
 		driver.manage().window().maximize();
